@@ -20,4 +20,5 @@ function numberToWords(iNum){
     if (iNum < 1000) return num[~~(iNum/100)] +" hundred" + (iNum%100 == 0? "": " and " + numberToWords(iNum%100));
     if (iNum < 1000000) return numberToWords(~~(iNum/1000)) + " thousand" + (iNum%1000 != 0? " " + numberToWords(iNum%1000): "");
     if (iNum < 1000000000) return numberToWords(~~(iNum/1000000)) + " million" + (iNum%1000000 != 0? " " + numberToWords(iNum%1000000): "");
+    if (iNum < 1000000000000) return numberToWords(~~(iNum/1000000000)) + " billion" + (iNum%1000000000 != 0? " " + numberToWords(iNum%1000000000): "");
 }
