@@ -30,15 +30,19 @@ function numberToWords(inpNum) {
     if (inpNum < 1000000000000) return numberToWords(~~(inpNum / 1000000000)) + " billion" + (inpNum % 1000000000 != 0 ? " " + numberToWords(inpNum % 1000000000) : "");
 };
 
-// Test function
+// Test function (totally unnecessary: In Chrome & Firefox (+31) you can add CSS in console.log messages (%c, color...) just for fun.)
 
 function myTest(expectedResult, numberToBeTested) {
     const resultOfNumberToWords = numberToWords(numberToBeTested);
-    console.log(`Run test: ${(expectedResult == resultOfNumberToWords)}
-    Number to be tested: ${numberToBeTested}
-    Expected: ${expectedResult}
-    Result: ${resultOfNumberToWords}
-    ---------------------------`);
+    if ((expectedResult == resultOfNumberToWords) === false) {
+        console.log('%cRun test: '+ (expectedResult == resultOfNumberToWords), 'color: red')
+    } else {
+        console.log('%cRun test: '+ (expectedResult == resultOfNumberToWords), 'color: green')
+    }
+    console.log(`Number to be tested: ${numberToBeTested}
+Expected: ${expectedResult}
+Result: ${resultOfNumberToWords}
+---------------------------`);
 }
 
     // Tests - first two should be true, the last two should be false
