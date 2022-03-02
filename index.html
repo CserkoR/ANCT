@@ -12,16 +12,25 @@
 
 <body class="bg-dark">
     <div class="d-flex align-items-center justify-content-center" style="height: 45vw">
-        <div>
-            <form class="input-group" id="myForm" style="width: 800px;" onsubmit="converterFunction()">
+        <div style="width: 600px">
+            <div class="form-check form-switch rounded text-center" style="background-color: lightblue;">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">British English counting (from 1000, to
+                    9999)</label>
+            </div>
+            <div>
+                <form class="input-group" id="myForm" onsubmit="converterFunction()">
                     <span class="input-group-text">My Number:</span>
-                    <input type="number" min="0" max="999999999999" step="1" class="form-control" id="inputNumber" required>
+                    <input type="number" min="0" max="999999999999" step="1" class="form-control" id="inputNumber"
+                        required>
                     <span class="input-group-text">
                         <input type="submit" class="btn btn-success" value="Convert">
                     </span>
-            </form>
+                </form>
+            </div>
             <div>
-                <span class="rounded-bottom d-block p-2 bg-primary text-center" id="numberInText">Number in text.</span>
+                <span class="rounded-bottom d-block p-2 text-center" id="numberInText"
+                    style="background-color: lightblue;">Number in words.</span>
             </div>
         </div>
     </div>
